@@ -3,11 +3,7 @@ agent any
 tools {
     terraform 'terraform-11'
 }
-stages{
-    stage('Git Checkout'){
-        steps{
-            gitcredentialsId: 'github', url: "https://github.com/bansa2/eks-jenfile.git"
-        }
+    stages{
     stage('terraform init'){
         steps{
             sh label:'', script:'terraform init'
