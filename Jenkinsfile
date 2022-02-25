@@ -17,6 +17,7 @@ stages{
         steps{
             git "https://github.com/bansa2/eks-jenfile.git"
         }
+    }
     stage('terraform init'){
         steps{
             sh label:'', script:'terraform init'
