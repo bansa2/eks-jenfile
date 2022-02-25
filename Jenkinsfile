@@ -5,10 +5,6 @@ environment {
         AWS_SECRET_ACCESS_KEY = credentials('AWS_SECRET_ACCESS_KEY')
     }
 stages{
-    stage('Git Checkout'){
-        steps{
-            gitcredentialsId: 'github', url: "https://github.com/bansa2/eks-jenfile.git"
-        }
     stage('terraform init'){
         steps{
             sh label:'', script:'terraform init'
