@@ -1,8 +1,7 @@
 pipeline{
 
-environment {
-      AWS_ACCESS_KEY_ID = credentials('AWS_ACCESS_KEY_ID')
-      AWS_SECRET_ACCESS_KEY = credentials('AWS_SECRET_ACCESS_KEY')
+withCredentials([string(credentialsId: 'AWS_ACCESS_KEY_ID', variable: 'AWS_SECRET_ACCESS_KEY')]) {
+    // some block
 }
 agent any
       
