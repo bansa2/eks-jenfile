@@ -4,9 +4,9 @@ agent any
         terraform 'terraform-11'
     }
 stages{
-    stage('terraform init'){
+    stage('Terraform init'){
         steps{
-            sh label:'', script:'terraform init'
+            sh label: '', script: 'terraform init'
         }
     }  
 
