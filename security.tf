@@ -35,14 +35,6 @@ resource "aws_security_group_rule" "eks-cluster-ingress-workstation-https" {
   type              = "ingress"
 }
 
-resource "aws_security_group_rule" "eks-cluster-ingress-traffic" {
-  cidr_blocks       = ["0.0.0.0/0"]
-  description       = "Allow workstation to communicate with the cluster API Server"
-  from_port         = 0
-  protocol          = -1
-  to_port           = 0
-  type              = "ingress"
-}
 
 # Node group security group
 resource "aws_security_group" "eks-cluster-node-sg" {
