@@ -21,13 +21,13 @@ resource "aws_route_table" "public-subnet-rt" {
 }
 
 resource "aws_route_table_association" "RT-public-subnet-1-associate"{
-    subnet_id = "${aws_subnet.public-subnet-1.id}"
-    route_table_id = "${aws_route_table.public-subnet-rt.id}"
+    subnet_id = aws_subnet.public-subnet-1.id
+    route_table_id = aws_route_table.public-subnet-rt.id
 }
 
 resource "aws_route_table_association" "RT-public-subnet-2-associate"{
-    subnet_id = "${aws_subnet.public-subnet-2.id}"
-    route_table_id = "${aws_route_table.public-subnet-rt.id}"
+    subnet_id = aws_subnet.public-subnet-2.id
+    route_table_id = aws_route_table.public-subnet-rt.id
 }
 
 
