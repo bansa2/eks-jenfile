@@ -12,12 +12,8 @@ environment {
     }
 
 agent any
-      options{
-          timestamps ()
-          ansiColor('xterm')
-      }
 stages{
-    stage('Checkout'){
+    stage('Checkout a'){
         steps{
             git "https://github.com/bansa2/eks-jenfile.git"
         }
