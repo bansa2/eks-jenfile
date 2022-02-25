@@ -1,3 +1,8 @@
+provider "aws"{
+    region = var.aws_region
+}
+
+
 resource "aws_vpc" "main" {
   cidr_block       = "100.10.0.0/16"
 
