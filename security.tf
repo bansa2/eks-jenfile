@@ -50,7 +50,7 @@ resource "aws_security_group_rule" "eks-cluster-ingress-traffic" {
 resource "aws_security_group" "eks-cluster-node-sg" {
   name = "eks-cluster-node-sg"
   description = "Security group for all nodes in the cluster"
-  vpc_id      = "${aws_vpc.main.id}" 
+  vpc_id      = aws_vpc.main.id 
 
   egress {
     from_port   = 0
