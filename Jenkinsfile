@@ -17,7 +17,16 @@ stages{
             sh ('terraform init')
         }
     }  
-
+    stage('terraform validate'){
+        steps{
+            sh ('terraform validate')
+        }
+    } 
+    stage('terraform plan'){
+        steps{
+            sh ('terraform plan')
+        }
+    } 
     stage('terraform Action'){
         steps{
               echo "Terraform action is --> ${action}"
