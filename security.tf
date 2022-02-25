@@ -1,7 +1,7 @@
 resource "aws_security_group" "eks-cluster-grp" {
   name = "eks_cluster_grp"
   description = "Cluster security"
-  vpc_id      = "${aws_vpc.main.id}"
+  vpc_id      = aws_vpc.main.id
 
   egress {
     from_port   = 0
