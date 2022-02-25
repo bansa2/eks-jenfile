@@ -3,10 +3,11 @@ agent any
     tools{
         terraform 'terraform-11'
     }
+    
 stages{
     stage('Terraform init'){
         steps{
-            sh label: '', script: 'terraform init'
+            sh script: 'terraform init'
         }
     }  
 
