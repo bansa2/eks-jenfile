@@ -1,13 +1,13 @@
 pipeline{
 
  environment { 
-                AWS_ACCESS_KEY_ID = credentials('AWS_ACCESS_KEY_ID')
-                AWS_SECRET_ACCESS_KEY = credentials('AWS_ACCESS_KEY_ID')
+                AWS_ACCESS_KEY_ID = credentials('AWS_ACCESS')
+                AWS_SECRET_ACCESS_KEY = credentials('AWS_ACCESS')
             }
 agent any
       
 stages{
-    stage('Checkout'){
+    stage('Checkout'){AWS_ACCESS
         steps{
             checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/bansa2/eks-jenfile.git']]])
         }
