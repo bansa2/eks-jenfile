@@ -7,7 +7,7 @@ pipeline{
 agent any
       
 stages{
-    stage('Checkout'){AWS_ACCESS
+    stage('Checkout'){
         steps{
             checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/bansa2/eks-jenfile.git']]])
         }
