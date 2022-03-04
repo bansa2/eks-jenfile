@@ -32,11 +32,11 @@ stages{
               echo "Terraform action is --> ${action}"
               sh ('terraform ${action} --auto-approve')
         }
+    }
    stage('create k8 cluster'){
         steps{
               sh 'kubectl apply -f deployment.yaml'
         }
     }  
-}
 }
 }
